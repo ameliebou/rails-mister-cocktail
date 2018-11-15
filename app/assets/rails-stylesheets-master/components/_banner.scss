@@ -1,0 +1,17 @@
+.banner {
+  margin-top: 70px;
+  height: 45vh;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  h1 {
+    font-family: 'Lobster' !important;
+    font-size: 50px;
+  }
+}
+.banner-title {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+}

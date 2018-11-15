@@ -1,0 +1,18 @@
+<div class="container">
+  <h1><%= @cocktail.name %> </h1>
+  <div class="ing-box">
+    <h2>Ingredients</h2>
+
+    <% @cocktail.doses.each do |dose| %>
+      <p><%= dose.description %> - <%= dose.ingredient.name %> <%= link_to '', cocktail_dose_path(@cocktail, dose), method: :delete, class:'fas fa-trash-alt' %></p>
+    <% end %>
+
+    <div class="col-sm-offset-3 col-sm-6">
+      <div class="add-ing-box">
+        <p class="text-center">Add an ingredient</p>
+
+        <%= render 'doses/new' %>
+      </div>
+    </div>
+  </div>
+</div>
