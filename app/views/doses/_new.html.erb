@@ -10,6 +10,6 @@
   <% end %>
 
   <%= f.association :ingredient, error: false %>
-  <%= f.input :description, error:false %>
+  <%= f.input :description, error:false, label: 'Quantity' %>
   <%= f.button :submit, class:'btn btn-primary center-block' %>
 <% end %>

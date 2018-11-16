@@ -20,7 +20,7 @@ class CocktailsController < ApplicationController
     @cocktail = Cocktail.new(params_cocktail)
     @cocktail.save
     if @cocktail.save
-      redirect_to cocktails_path
+      redirect_to @cocktail
     else
       render 'new'
     end
