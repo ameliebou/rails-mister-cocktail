@@ -1,10 +1,23 @@
+
 <div class="container">
-  <h1><%= @cocktail.name %> </h1>
+  <div class="cocktail-show-img centerblock" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cl_image_path @cocktail.photo, crop: :fill %>')">
+    <h1>
+      <%= @cocktail.name %>
+    </h1>
+  </div>
+
   <div class="ing-box">
     <h2>Ingredients</h2>
 
+    <% if @cocktail.doses.empty? %>
+      <p class='grey-text'>No ingredient to display for now.</p>
+    <% end %>
+
     <% @cocktail.doses.each do |dose| %>
-      <p><%= dose.description %> - <%= dose.ingredient.name %> <%= link_to '', cocktail_dose_path(@cocktail, dose), method: :delete, class:'fas fa-trash-alt' %></p>
+      <p>
+        <%= dose.description %> - <%= dose.ingredient.name %> <%= link_to '', cocktail_dose_path(@cocktail, dose), method: :delete, class:'fas fa-trash-alt' %>
+      </p>
     <% end %>
 
     <div class="col-sm-offset-3 col-sm-6">

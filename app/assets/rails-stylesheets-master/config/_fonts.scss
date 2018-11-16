@@ -3,6 +3,10 @@
 // Define fonts for body and headers
 $body-font: "Open Sans", "Helvetica", "sans-serif";
 $headers-font: "Source Sans Pro", "Helvetica", "sans-serif";
+.grey-text {
+  color: rgb(100,100,100);
+  margin-bottom: 50px;
+}
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {

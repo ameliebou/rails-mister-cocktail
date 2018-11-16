@@ -6,6 +6,12 @@
   position: relative;
   color:white;
   margin: 5px;
+  h2 {
+    font-weight: lighter;
+    position: absolute;
+    bottom: 0px;
+    text-shadow: 0px 0px 8px black;
+  };
   a {
     position:absolute;
     width: 100%;
@@ -31,3 +37,33 @@
   margin: 7px;
   border: 1px solid rgb(200,200,200);
 }
+
+.add-c-box {
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 1px 1px 4px rgb(150,150,150);
+  padding: 10px;
+  border: 1px solid rgb(200,200,200);
+  #cocktail_photo {
+    font-size: 16px;
+    color: rgb(150,150,150);
+  }
+}
+.cocktail-show-img {
+  height: 25vh;
+  width: 60vw;
+  background: cover;
+  background-position: center;
+  margin: 0 auto;
+  box-shadow: 0px 1px 4px rgb(100,100,100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    color:white;
+    font-family: 'Lobster';
+    margin-top: 0;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  }
+}
+

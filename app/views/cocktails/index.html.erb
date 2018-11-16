@@ -1,17 +1,23 @@
-<div class="banner text-center" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://images.unsplash.com/photo-1496318447583-f524534e9ce1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c405034528cf04acab707e51be371d3c&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb');">
+<div class="banner text-center" style="background-image: linear-gradient(-150deg, rgba(168, 41, 0, 0.5) 0%, rgba(0,36,61,0.6) 50%), url('https://www.rd.com/wp-content/uploads/2017/04/ft-8-Skinny-Summer-Cocktails-That-Wont-Bust-Your-Diet.jpg');">
   <div class="banner-title">
     <h1>Awesome cocktails</h1>
   </div>
 </div>
 
 <div class="container">
+
   <div class="row pad-10">
     <div class="cards">
       <% @cocktails.each do |c| %>
-        <div class="col-md-3 col-xs-12 col-sm-4 col-lg-2 cocktail-card">
-          <h2><%= c.name %></h2>
+
+        <div class="col-md-3 col-xs-12 col-sm-4 col-lg-2 cocktail-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cl_image_path c.photo, height: 300, width: 400, crop: :fill %>')">
+          <div class="card-title">
+            <h2><%= c.name %></h2>
+          </div>
           <%= link_to '', c %>
         </div>
+
       <% end %>
     </div>
   </div>
